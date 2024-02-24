@@ -2,7 +2,7 @@ import { defineTheme } from 'pinceau'
 
 export default defineTheme({
     colors: {
-        primary: {
+        lightBlue: {
             50: '#e2f0f5',
             100: '#c2d9dd',
             200: '#a1bdc4',
@@ -26,5 +26,12 @@ export default defineTheme({
             800: '#c16448',
             900: '#a35a44',
         }
+    },
+    font: {
+        sans: 'OpenSans',
+        serif: 'Prata'
+    },
+    socials: {
+        linkedIn: ''
     }
 })
