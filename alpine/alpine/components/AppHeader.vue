@@ -64,7 +64,7 @@ css({
       '.left &&': {
         right: 0
       },
-      '@sm': {
+      '@md': {
         display: 'none'
     },
     '.color-mode-switch': {
@@ -109,7 +109,7 @@ css({
         padding: '{space.6}',
         textAlign: 'right'
       },
-      '@sm': {
+      '@md': {
         display: 'none'
       },
       '@dark': {
@@ -133,7 +133,7 @@ css({
       '.right &&': {
         justifyContent: 'flex-end',
       },
-      '@sm': {
+      '@md': {
         gridColumn: 'span 4 / span 4',
         gridColumnStart: 'auto',
         '.right &&': {
@@ -148,7 +148,7 @@ css({
     },
     '.main-nav': {
       display: 'none',
-      '@sm': {
+      '@md': {
         display: 'flex',
         gridColumn: 'span 8 / span 8',
         fontSize: '{text.xl.fontSize}',
