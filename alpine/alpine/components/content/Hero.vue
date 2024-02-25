@@ -53,7 +53,7 @@ css({
         gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
       },
       '.title': {
-        fontFamily: ['Prata', 'serif'],
+        fontFamily: '{font.serif}',
         fontSize: '{text.4xl.fontSize}',
         lineHeight: '{text.4xl.lineHeight}',
         fontWeight: '{fontWeight.bold}',

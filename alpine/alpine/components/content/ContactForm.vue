@@ -6,20 +6,20 @@ const props = defineProps({
     type: String,
     default: 'Per E-mail kontaktieren'
   },
-  fields: {
-    type: Object as PropType<{email: String}>,
-    default: () => { '' }
-  }
+  email: {
+    type: String,
+    default: ''
+  },
 })
 </script>
 
 <template>
     <div class="text">
-    E-mail: {{ fields.email }}
+    E-mail: {{ email }}
     </div>
     <div>
     <Button>
-      <a :href="'mailto:' + fields.email">{{ sendMailButtonText }}</a>
+      <a :href="'mailto:' + email">{{ sendMailButtonText }}</a>
     </Button>
     </div>
 </template>

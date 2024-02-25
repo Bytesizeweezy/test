@@ -14,15 +14,15 @@ const onClick = () => {
     <ColorScheme>
       <template v-if="colorMode.preference === 'dark'">
         <Icon name="uil:moon" />
-        <span class="sr-only">Dark mode</span>
+        <span class="sr-only">Dunkel</span>
       </template>
       <template v-else-if="colorMode.preference === 'light'">
         <Icon name="uil:sun" />
-        <span class="sr-only">Light mode</span>
+        <span class="sr-only">Hell</span>
       </template>
       <template v-else>
         <Icon name="uil:desktop" />
-        <span class="sr-only">System mode</span>
+        <span class="sr-only">System abhängig</span>
       </template>
     </ColorScheme>
   </button>

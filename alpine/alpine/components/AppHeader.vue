@@ -114,9 +114,6 @@ css({
       },
       '@dark': {
         borderColor: '{color.gray.800}',
-      },
-      '.in-overlay': {
-        display: 'block !important'
       }
     },
     '.logo': {

@@ -40,7 +40,7 @@ css({
       },
     a: {
         position: 'relative',
-        fontFamily: ['Prata', 'serif'],
+        fontFamily: '{font.serif}',
         '&.router-link-active': {
           color: '{color.secondary.800}'
         },
@@ -60,6 +60,14 @@ css({
         }
       },
 
+    }
+  },
+  '.overlay': {
+    '.in-overlay': {
+      display: 'block',
+      li: {
+        marginBottom: '{space.2}',
+      }
     }
   }
 })

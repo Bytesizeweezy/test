@@ -24,7 +24,7 @@ css({
     backgroundImage: 'linear-gradient(to right, {color.secondary.800} 0%, {color.primary.500} 100%)',
     color: '{color.gray.100}',
     textTransform: 'uppercase',
-    fontFamily: ['Prata', 'serif'],
+    fontFamily: '{font.serif}',
     fontSize: '{text.sm.fontSize}',
     lineHeight: '{text.sm.lineHeight}',
     fontWeight: '{fontWeight.medium}',

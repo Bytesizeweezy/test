@@ -1,41 +1,37 @@
 <script setup lang="ts">
 import { withTrailingSlash } from 'ufo'
+import ProjectsListItem from "~/alpine/components/content/ProjectsListItem.vue";
 
 const props = defineProps({
   path: {
     type: String,
-    default: 'articles'
+    default: 'projekte'
   }
 })
 
 // @ts-ignore
-const { data: _articles } = await useAsyncData('articles', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
+const { data: _projekte } = await useAsyncData('projekte', async () => await queryContent(withTrailingSlash(props.path)).sort({ date: -1 }).find())
 
-const articles = computed(() => _articles.value || [])
+const projekte = computed(() => _projekte.value || [])
 </script>
 
 <template>
-  <div v-if="articles?.length" class="articles-list">
-    <div class="featured">
-      <ArticlesListItem :article="articles[0]" :featured="true" />
-    </div>
+  <div v-if="projekte?.length" class="projekt-liste">
     <div class="layout">
-      <ArticlesListItem v-for="(article, index) in articles.slice(1)" :key="index" :article="article" />
+      <ProjectsListItem v-for="(article, index) in projekte" :key="index" :article="article" />
     </div>
   </div>
   <div v-else class="tour">
-    <p>Seems like there are no articles yet.</p>
+    <p>Noch keine Projekte konfiguriert</p>
     <p>
-      You can start by
-      <!-- eslint-disable-next-line -->
-      <ProseA href="https://alpine.nuxt.space/articles/write-articles">creating</ProseA> one in the <ProseCodeInline>articles</ProseCodeInline> folder.
+      Füge eine Markdown Datei in dem <ProseCodeInline>projekte</ProseCodeInline> Ordner hinzu.
     </p>
   </div>
 </template>
 
 <style scoped lang="ts">
 css({
-  '.articles-list': {
+  '.projekt-liste': {
     '@sm': {
       px: '{space.12}',
     },
@@ -57,7 +53,7 @@ css({
         gap: '{space.8}',
       },
       '@lg': {
-        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
       },
     }
   },

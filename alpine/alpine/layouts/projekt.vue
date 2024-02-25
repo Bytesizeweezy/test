@@ -1,5 +1,5 @@
 <template>
-  <article ref="article">
+  <projekt ref="projekt">
     <!-- TODO: could be refactored as a transparent ButtonLink -->
     <NuxtLink
       :to="parentPath"
@@ -26,12 +26,12 @@
         class="back-to-top"
       >
         <ProseA @click.prevent.stop="onBackToTop">
-          {{ alpine?.backToTop?.text || 'Back to top' }}
+          {{ alpine?.backToTop?.text || 'Zurück nach Oben' }}
           <Icon :name="alpine?.backToTop?.icon || 'material-symbols:arrow-upward'" />
         </ProseA>
       </div>
     </div>
-  </article>
+  </projekt>
 </template>
 
 <script setup lang="ts">
@@ -39,7 +39,7 @@ const { page } = useContent()
 const route = useRoute()
 const alpine = useAppConfig().alpine
 
-const article = ref<HTMLElement | null>(null)
+const projekt = ref<HTMLElement | null>(null)
 
 if (page.value && page.value.cover) {
   useHead({
@@ -58,7 +58,7 @@ const parentPath = computed(
 )
 
 const onBackToTop = () => {
-  article.value?.scrollIntoView({
+  projekt.value?.scrollIntoView({
     behavior: 'smooth'
   })
 }
@@ -66,7 +66,7 @@ const onBackToTop = () => {
 
 <style scoped lang="ts">
 css({
-  article: {
+  projekt: {
     maxWidth: '{alpine.readableLine}',
     mx: 'auto',
     py: '{space.4}',

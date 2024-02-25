@@ -50,8 +50,7 @@ export default defineNuxtConfig({
   ],
   components: [
     { path: resolve('./components'), global: true },
-    { path: resolve('./components/content'), global: true },
-    { path: resolve('./components/data-entry'), global: true }
+    { path: resolve('./components/content'), global: true }
   ],
   css: [
     resolve('./assets/main.css'),
