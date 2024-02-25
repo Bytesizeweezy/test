@@ -1,6 +1,8 @@
 body {
   background-color: $dt('alpine.body.backgroundColor');
   background-image: linear-gradient($dt('color.primary.600') 1%, $dt('alpine.body.backgroundColor') 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   @sm {
     background-image: radial-gradient(
         circle at top left,
