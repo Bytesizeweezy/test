@@ -1,11 +1,14 @@
 export default defineNuxtConfig({
   // https://github.com/nuxt-themes/alpine
-  extends: '@nuxt-themes/alpine',
+  extends: './alpine',
 
-  modules: [
-    // https://github.com/nuxt-modules/plausible
-    '@nuxtjs/plausible',
-    // https://github.com/nuxt/devtools
-    '@nuxt/devtools'
-  ]
+  modules: ['@nuxt/devtools', '@nuxtjs/google-fonts'],
+
+  googleFonts: {
+    families: {
+      Prata: true,
+      OpenSans: true
+    },
+    download: true
+  },
 })
