@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   image: {
     type: String,
     default: null
@@ -11,8 +11,23 @@ defineProps({
   imagePosition: {
     type: String,
     default: 'right'
+  },
+  ratioHeight: {
+    type: String,
+    default: "9"
+  },
+  ratioWidth: {
+    type: String,
+    default: "16"
   }
 })
+
+const cssVars = () => {
+  return {
+    '--ratio-width': props.ratioWidth,
+    '--ratio-height': props.ratioHeight,
+  }
+}
 </script>
 
 <template>
@@ -33,8 +48,9 @@ defineProps({
         :class="imagePosition"
         :src="image"
         :alt="imageAlt"
-        :width="16"
-        :height="9"
+        :width="ratioWidth"
+        :height="ratioHeight"
+        :style="cssVars()"
       />
     </div>
   </section>
@@ -63,7 +79,7 @@ css({
       },
       img: {
         width: '100%',
-        aspectRatio: '16 / 9',
+        aspectRatio: '{ratio-width} / {ratio-height}',
         objectFit: 'cover',
         borderRadius: '{radii.md}',
         '@lg': {
