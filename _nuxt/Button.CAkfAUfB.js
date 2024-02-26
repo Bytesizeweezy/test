@@ -1,1 +1,0 @@
-import{d as a,b as o,c as d,a4 as s,l as n}from"./entry.WLA4erAG.js";const l=["type","disabled"],p=a({__name:"Button",props:{type:{type:String,default:"submit"},disabled:{type:Boolean,default:!1}},setup(e){return(t,c)=>(o(),d("button",{type:e.type,disabled:e.disabled},[s(t.$slots,"default",{},void 0,!0)],8,l))}}),_=n(p,[["__scopeId","data-v-dd06d0a7"]]);export{_ as default};
