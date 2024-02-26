@@ -68,5 +68,11 @@ export default defineTheme({
     p: {
       fontSize: '18px'
     },
+  },
+  typography: {
+    font: {
+      display: '{font.serif}',
+      body: '{font.sans}'
+    }
   }
 })
