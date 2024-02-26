@@ -21,12 +21,10 @@ defineProps({
       <div class="content">
         <div class="title">
           <ContentSlot :use="$slots.title" unwrap="p">
-            Hero title
           </ContentSlot>
         </div>
         <div class="description">
           <ContentSlot :use="$slots.description" unwrap="p">
-            Hero description
           </ContentSlot>
         </div>
       </div>
@@ -68,8 +66,10 @@ css({
         aspectRatio: '16 / 9',
         objectFit: 'cover',
         borderRadius: '{radii.md}',
-        '&.left': {
-          order: -1
+        '@lg': {
+          '&.left': {
+            order: -1
+          }
         }
       },
     }
