@@ -127,7 +127,7 @@ css({
       },
       '.description': {
         marginBottom: '{space.4}',
-        lineClamp: 2,
+        lineClamp: 4,
         '.featured &&': {
           lineClamp: 4,
         }
