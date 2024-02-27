@@ -1,5 +1,5 @@
 <template>
-  <projekt ref="projekt">
+  <article ref="article">
     <!-- TODO: could be refactored as a transparent ButtonLink -->
     <NuxtLink
       :to="parentPath"
@@ -31,7 +31,7 @@
         </ProseA>
       </div>
     </div>
-  </projekt>
+  </article>
 </template>
 
 <script setup lang="ts">
@@ -39,7 +39,7 @@ const { page } = useContent()
 const route = useRoute()
 const alpine = useAppConfig().alpine
 
-const projekt = ref<HTMLElement | null>(null)
+const article = ref<HTMLElement | null>(null)
 
 if (page.value && page.value.cover) {
   useHead({
@@ -58,7 +58,7 @@ const parentPath = computed(
 )
 
 const onBackToTop = () => {
-  projekt.value?.scrollIntoView({
+  article.value?.scrollIntoView({
     behavior: 'smooth'
   })
 }
@@ -66,8 +66,7 @@ const onBackToTop = () => {
 
 <style scoped lang="ts">
 css({
-  projekt: {
-    maxWidth: '{alpine.readableLine}',
+  article: {
     mx: 'auto',
     py: '{space.4}',
     '@sm': {
